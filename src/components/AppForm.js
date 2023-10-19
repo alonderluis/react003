@@ -1,0 +1,16 @@
+import React from 'react';
+
+const AppForm = (msj) => {
+  return (
+    <div style={{background:"orange",padding:"10px",textAlign:"center",}}>
+         <h>AppForm.js</h> <br/>
+        <input placeholder='Nombres...'/><br/>
+        <input placeholder='Edad...'/><br/>
+        <input placeholder='Genero...'/><br/>
+        <button>GUARDAR</button>
+        
+        </div>
+  )
+}
+
+export default AppForm;
