@@ -10,6 +10,9 @@ function App() {
     <h1>App.js</h1>
     <AppForm></AppForm>
     <i class="large material-icons">insert_chart</i>
+    <p>1. Juan Manuel 23 Masculino ----X----A </p>
+    <p>1. Rosa Maria  25 Femenino  ----X----A </p>
+    <p>1. Luis Miguel 22 Masculino ----X----A </p>
     </div>
   );
 }
