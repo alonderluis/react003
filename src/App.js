@@ -2,7 +2,7 @@
 //import './App.css';
 import { useState } from 'react';
 import AppForm from './components/AppForm';
-import { collection, doc, onSnapshot, query } from 'firebase/firestore';
+import { collection, deleteDoc, doc, onSnapshot, query } from 'firebase/firestore';
 import { db } from './firebase/firebase';
 
 function App() {
@@ -23,18 +23,30 @@ function App() {
   console.log(docBD);
   ///////// DELETE - Eliminar - fnDelete ///////
   const [idActual, setIdActual] = useState("");
-  const fnDelete = (xId) => {
+  const fnDelete = async(xId) => {
+    if(window.confirm("confirme para eliminra")){
+      await deleteDoc(doc(db, 'persona', xId));
+      console.log("se elemino..."+xId);
+    }
   }
   
   return (
     <div style={{background:"yellow", width:"350px", 
      padding:"10px"}}>
       <AppForm {...{idActual}} />
-      <i class="large material-icons">insert_chart</i>
-
-      <p>1. Juan Manuel 23 Masculino ---- x -  A</p>
-      <p>2. Rosa Maria  25 Femenino  ---- x -  A</p>
-      <p>3. Luis Miguel 40 Masculino ---- x -  A</p>
+      {
+        docBD.map((p, index) =>
+         <p key={p.id}>
+          {index+1}. {p.nombre} 
+          ---- 
+          <span onClick={() => fnDelete(p.id)}>X</span>
+          ---- 
+          <span onClick={() => setIdActual(p.id)}>A</span> <br/>
+          
+          23
+          Masculino 
+        </p>)
+      }
     </div>
   );
 }
