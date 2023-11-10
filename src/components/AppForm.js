@@ -81,7 +81,8 @@ const Appform = (props) => {
   }
 
   return (
-    <div style={{background:"orange", padding:"10px", textAlign:"center"}}>
+    //style={{background:"orange", padding:"10px", textAlign:"center"}}
+    <div >
       <h>AppForm.js</h> <br/> 
       <form onSubmit={manejarEnvio} >
         <input onChange={manejarCambiosEntrada} value={objeto.nombre} name='nombre' type='text' placeholder='Nombres...'></input><br></br>

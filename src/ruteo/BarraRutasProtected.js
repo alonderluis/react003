@@ -46,7 +46,8 @@ const BarraRutasProtected = () => {
     }
   
     return (
-      <div style={{ background:"royalblue", padding:"10px" }}>
+      //style={{ background:"royalblue", padding:"10px" }}
+      <div >
         <nav>
           <div id="login">
             <ul>
@@ -104,7 +105,8 @@ export default BarraRutasProtected;
 
 function MarcoParaSistemaCRUD() {
     return (
-      <div style={{background:"cornflowerblue", padding:"10px"}}>
+      //style={{background:"cornflowerblue", padding:"10px"}}
+      <div >
         <h1>Marco sistema CRUD</h1>
         < Outlet /> {/* Aquí se mostrarán las rutas secundarias */}
       </div>
@@ -113,7 +115,8 @@ function MarcoParaSistemaCRUD() {
   
 function MarcoParaSistemaFILE() {
     return (
-      <div style={{background:"slateblue", padding:"10px"}}>
+      //style={{background:"slateblue", padding:"10px"}}
+      <div >
         <h1>Marco Sistema FILES</h1>
         < Outlet /> {/* Aquí se mostrarán las rutas secundarias */}
       </div>

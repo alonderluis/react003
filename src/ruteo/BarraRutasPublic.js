@@ -34,7 +34,8 @@ const BarraRutasPublic = () => {
     }
   
     return (
-      <div style={{ background:"greenyellow", }}>
+      //style={{ background:"greenyellow", }}
+      <div >
         <nav>
           <div id="login">
             <ul>

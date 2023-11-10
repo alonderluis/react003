@@ -33,7 +33,8 @@ const handleSignIn = async (e) => {
   }
   return (
     <div id='public'>
-      <h2>Iniciar Sesión</h2>
+      
+
       <form onSubmit={handleSignIn}>
         <div>
           <label>Email:</label>
@@ -51,3 +52,4 @@ const handleSignIn = async (e) => {
 }
 
 export default LoginForm;
+  

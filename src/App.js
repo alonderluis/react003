@@ -13,7 +13,8 @@ function App() {
  
  const { user} = useAuth();
   return (
-    <div style={{background:"plum"}}>
+//style={{background:"plum"}}
+    <div >
 
       <Router> 
         {user ? <BarraRutasProtected /> : <BarraRutasPublic/>}
